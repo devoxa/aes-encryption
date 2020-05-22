@@ -1,0 +1,32 @@
+{
+  "name": "@devoxa/aes-encryption",
+  "description": "Encrypting and decrypting of strings with `aes-256-gcm`",
+  "version": "0.1.0",
+  "main": "dist/src/index.js",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/devoxa/aes-encryption"
+  },
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --ignore-path='.gitignore' --list-different --write .",
+    "format:check": "prettier --ignore-path='.gitignore' --check .",
+    "lint": "eslint '{src,tests}/**/*.ts'",
+    "build": "rm -rf dist/ && tsc"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.0.0",
+    "typescript": "^3.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
