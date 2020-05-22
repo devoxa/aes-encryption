@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`aes-encryption errors for the wrong encryption key when decrypting 1`] = `"Unsupported state or unable to authenticate data"`;
+
+exports[`aes-encryption errors when a wrong input format is provided 1`] = `"The \\"data\\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received null"`;
+
+exports[`aes-encryption errors when a wrong input format is provided 2`] = `"The \\"data\\" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array"`;
+
+exports[`aes-encryption errors when a wrong input format is provided 3`] = `"Unsupported state or unable to authenticate data"`;
+
+exports[`aes-encryption errors when a wrong input format is provided 4`] = `"Invalid authentication tag length: 0"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 1`] = `"Invalid key length"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 2`] = `"Invalid key length"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 3`] = `"Invalid key length"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 4`] = `"Invalid key length"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 5`] = `"Invalid key length"`;
+
+exports[`aes-encryption errors when a wrong key format is provided 6`] = `"Invalid key length"`;
