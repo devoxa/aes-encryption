@@ -12,7 +12,8 @@
     "format": "prettier --ignore-path='.gitignore' --list-different --write .",
     "format:check": "prettier --ignore-path='.gitignore' --check .",
     "lint": "eslint '{src,tests}/**/*.ts'",
-    "build": "rm -rf dist/ && tsc"
+    "build": "rm -rf dist/ && tsc",
+    "preversion": "yarn build"
   },
   "devDependencies": {
     "@types/jest": "^25.2.2",
