@@ -265,6 +265,20 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
+"@devoxa/eslint-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@devoxa/eslint-config/-/eslint-config-1.0.0.tgz#923969e631499fc313760684dfd25b94cfdad691"
+  integrity sha512-+KlG4TOGQrofAdHVDRGbAbVvUWfmgKJESXY6y3EDOwNSVsBUdph82KxNsEPnRFrMpeu/+rUGXCoI1d7VBO1OKA==
+  dependencies:
+    "@typescript-eslint/eslint-plugin" "^2.33.0"
+    "@typescript-eslint/parser" "^2.33.0"
+    eslint-config-prettier "^6.11.0"
+
+"@devoxa/prettier-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@devoxa/prettier-config/-/prettier-config-1.0.0.tgz#732a8d78f603d9802751a408914404494812f227"
+  integrity sha512-M/QmEXFxsHgIDhiahUwONSMjv3zYv4BVGUKb/jced4bSJch/GbgXf2BsG6sevD7JFRDwoi4pHX71woYzAWoC3A==
+
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.0.0.tgz#10602de5570baea82f8afbfa2630b24e7a8cfe5b"
