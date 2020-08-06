@@ -22,7 +22,7 @@
   "devDependencies": {
     "@devoxa/eslint-config": "^1.0.0",
     "@devoxa/prettier-config": "^1.0.0",
-    "@types/jest": "^26.0.3",
+    "@types/jest": "^26.0.9",
     "@types/node": "^14.0.1",
     "eslint": "^7.0.0",
     "jest": "^26.0.1",
