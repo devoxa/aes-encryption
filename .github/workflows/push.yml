@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Continuous Integration
 
 on: [push]
 
@@ -8,10 +8,16 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-yarn-
+            ${{ runner.OS }}-
       - run: yarn install --frozen-lockfile
       - run: yarn test --coverage
       - run: bash <(curl -s https://codecov.io/bash)
