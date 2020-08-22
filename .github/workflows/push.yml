@@ -24,7 +24,7 @@ jobs:
       - name: 'Run tests'
         run: yarn test --coverage
       - name: 'Save code coverage'
-        run: bash <(curl -s https://codecov.io/bash)
+        uses: codecov/codecov-action@v1
       - name: 'Check code formatting'
         run: yarn format:check
       - name: 'Run linter'
