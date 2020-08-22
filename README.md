@@ -17,9 +17,9 @@
     />
   </a>
 
-  <a href="https://app.circleci.com/pipelines/github/devoxa/aes-encryption?branch=master">
+  <a href="https://github.com/devoxa/aes-encryption/actions?query=branch%3Amaster+workflow%3A%22Continuous+Integration%22">
     <img
-      src="https://img.shields.io/circleci/build/github/devoxa/aes-encryption/master?style=flat-square"
+      src="https://img.shields.io/github/workflow/status/devoxa/aes-encryption/Continuous%20Integration?style=flat-square"
       alt="Build Status"
     />
   </a>
