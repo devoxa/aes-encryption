@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/camelcase */
 import { encrypt, decrypt } from '../src/index'
 
 const KEY = 'gdPfTP7h1hcs1ySGp0vcFwIZVpWfUSqJ'
@@ -32,25 +31,25 @@ describe('aes-encryption', () => {
       encrypt('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', 'FooBar')
     ).toThrowErrorMatchingSnapshot()
     expect(() => encrypt('AAAAAAAAAAAAAAAAAA', 'FooBar')).toThrowErrorMatchingSnapshot()
-    // @ts-expect-error
+    // @ts-expect-error key has to be a string
     expect(() => encrypt([1, 2, 3], 'FooBar')).toThrowErrorMatchingSnapshot()
     expect(() =>
       decrypt('AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', encrypted)
     ).toThrowErrorMatchingSnapshot()
     expect(() => decrypt('AAAAAAAAAAAAAAAAAA', encrypted)).toThrowErrorMatchingSnapshot()
-    // @ts-expect-error
+    // @ts-expect-error key has to be a string
     expect(() => encrypt([1, 2, 3], 'FooBar')).toThrowErrorMatchingSnapshot()
   })
 
   it('errors when a wrong input format is provided', () => {
     const encrypted = encrypt(KEY, 'FooBar')
 
-    // @ts-expect-error
+    // @ts-expect-error input has to be a string
     expect(() => encrypt(KEY, null)).toThrowErrorMatchingSnapshot()
-    // @ts-expect-error
+    // @ts-expect-error input has to be a string
     expect(() => encrypt(KEY, [1, 2, 3])).toThrowErrorMatchingSnapshot()
     expect(() => decrypt(KEY, 'foo' + encrypted)).toThrowErrorMatchingSnapshot()
-    // @ts-expect-error
+    // @ts-expect-error input has to be a string
     expect(() => decrypt(KEY, [encrypted])).toThrowErrorMatchingSnapshot()
   })
 })
