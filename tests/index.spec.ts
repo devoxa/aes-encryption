@@ -5,6 +5,7 @@ const KEY = 'gdPfTP7h1hcs1ySGp0vcFwIZVpWfUSqJ'
 describe('aes-encryption', () => {
   it('can encrypt and decrypt a string', () => {
     expect(decrypt(KEY, encrypt(KEY, 'FooBar'))).toEqual('FooBar')
+    expect(decrypt(KEY, encrypt(KEY, '👋 🤚 🖐'))).toEqual('👋 🤚 🖐')
   })
 
   it('does not produce the same output twice', () => {

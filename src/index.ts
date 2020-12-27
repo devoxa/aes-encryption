@@ -23,7 +23,7 @@ export function decrypt(key: string, input: string): string {
   const decipher = crypto.createDecipheriv('aes-256-gcm', keyBuffer, iv)
   decipher.setAuthTag(tag)
 
-  const decrypted = decipher.update(text, 'binary', 'utf8') + decipher.final('utf8')
+  const decrypted = decipher.update(text) + decipher.final('utf8')
 
   return decrypted
 }
