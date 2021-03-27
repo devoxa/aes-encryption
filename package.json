@@ -20,7 +20,7 @@
   },
   "prettier": "@devoxa/prettier-config",
   "devDependencies": {
-    "@devoxa/eslint-config": "^1.0.0",
+    "@devoxa/eslint-config": "^2.0.5",
     "@devoxa/prettier-config": "^1.0.0",
     "@types/jest": "^26.0.3",
     "@types/node": "^14.14.16",
