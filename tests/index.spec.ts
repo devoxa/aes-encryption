@@ -1,4 +1,4 @@
-import { encrypt, decrypt } from '../src/index'
+import { decrypt, encrypt } from '../src/index'
 
 const KEY = 'gdPfTP7h1hcs1ySGp0vcFwIZVpWfUSqJ'
 
