@@ -3,12 +3,12 @@ import { decrypt, encrypt } from '../src/index'
 const KEY = 'gdPfTP7h1hcs1ySGp0vcFwIZVpWfUSqJ'
 
 describe('aes-encryption', () => {
-  it('can encrypt and decrypt a string', () => {
+  test('can encrypt and decrypt a string', () => {
     expect(decrypt(KEY, encrypt(KEY, 'FooBar'))).toEqual('FooBar')
     expect(decrypt(KEY, encrypt(KEY, '👋 🤚 🖐'))).toEqual('👋 🤚 🖐')
   })
 
-  it('does not produce the same output twice', () => {
+  test('does not produce the same output twice', () => {
     const first = encrypt(KEY, 'FooBar')
     const second = encrypt(KEY, 'FooBar')
 
@@ -17,7 +17,7 @@ describe('aes-encryption', () => {
     expect(decrypt(KEY, second)).toEqual('FooBar')
   })
 
-  it('errors for the wrong encryption key when decrypting', () => {
+  test('errors for the wrong encryption key when decrypting', () => {
     const encrypted = encrypt(KEY, 'FooBar')
 
     expect(() =>
@@ -25,7 +25,7 @@ describe('aes-encryption', () => {
     ).toThrowErrorMatchingSnapshot()
   })
 
-  it('errors when a wrong key format is provided', () => {
+  test('errors when a wrong key format is provided', () => {
     const encrypted = encrypt(KEY, 'FooBar')
 
     expect(() =>
@@ -42,7 +42,7 @@ describe('aes-encryption', () => {
     expect(() => encrypt([1, 2, 3], 'FooBar')).toThrowErrorMatchingSnapshot()
   })
 
-  it('errors when a wrong input format is provided', () => {
+  test('errors when a wrong input format is provided', () => {
     const encrypted = encrypt(KEY, 'FooBar')
 
     // @ts-expect-error input has to be a string
