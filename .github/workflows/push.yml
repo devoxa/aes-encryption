@@ -19,7 +19,7 @@ jobs:
       - name: 'Setup Node.JS'
         uses: actions/setup-node@v3
         with:
-          node-version: '18.17'
+          node-version: '20.10'
 
       - name: 'Cache dependencies'
         uses: buildjet/cache@v3
