@@ -16,14 +16,14 @@ export function decrypt(key: string, input: string): string {
   const keyBuffer = Buffer.from(key)
   const inputBuffer = Buffer.from(input, 'base64')
 
-  const iv = inputBuffer.slice(0, 16)
-  const tag = inputBuffer.slice(16, 32)
-  const text = inputBuffer.slice(32)
+  const iv = inputBuffer.subarray(0, 16)
+  const tag = inputBuffer.subarray(16, 32)
+  const text = inputBuffer.subarray(32)
 
   const decipher = crypto.createDecipheriv('aes-256-gcm', keyBuffer, iv)
   decipher.setAuthTag(tag)
 
-  const decrypted = decipher.update(text) + decipher.final('utf8')
+  const decrypted = decipher.update(text).toString() + decipher.final('utf8')
 
   return decrypted
 }
