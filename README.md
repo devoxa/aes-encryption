@@ -5,7 +5,7 @@
 
 <!-- Description -->
 <h4 align="center">
-  Encrypting and decrypting strings with <code>aes-256-gcm</code>.
+  Encrypting and decrypting strings with <code>aes-256-gcm</code>
 </h4>
 
 <!-- Badges -->
